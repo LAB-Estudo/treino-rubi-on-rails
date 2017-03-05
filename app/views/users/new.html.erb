@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to 'Voltar', users_path, :class => 'navbar-brand' %>
+    </div>
+  </div>
+  <h2 class="text-center">Cadastrar Usuário</h2>
+</nav>
+
+
+<div class="container">
+  <%= render 'form', user: @user %>
+</div>

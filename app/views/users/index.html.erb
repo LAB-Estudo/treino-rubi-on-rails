@@ -1,0 +1,36 @@
+<h1 class="text-center">Lista de Usuários</h1>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Endereço</th>
+        <th>Cpf</th>
+        <th>Listar</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.age %></td>
+          <td><%= user.address %></td>
+          <td><%= user.cpf %></td>
+          <td><%= link_to ' Listar', user, :class => 'btn btn-primary btn-xs', :style => 'color: white;' %></td>
+          <td><%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-warning btn-xs', :style => 'color: white' %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Deseja excluir esse Usuário?' }, :class => 'btn btn-danger btn-xs', :style => 'color: white' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New User', new_user_path, :class => 'btn btn-success', :style => 'color: white;' %>
+
+</div>
