@@ -1,0 +1,17 @@
+language: ruby
+
+rvm:
+  - 2.3qwesd
+
+sudo: required
+
+dist: trusty
+
+install:
+  - gem install rails
+  - gem install bundle
+
+script:
+  - bundler install
+  - rake db:migrate
+  - rails test
