@@ -2,12 +2,7 @@
 
 language: ruby
 
-rvm:
-  - 2.3qwesd
-
 sudo: required
-
-dist: trusty
 
 install:
   - gem install rails
